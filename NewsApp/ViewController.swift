@@ -40,7 +40,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return feed.totalResults
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
+    {
         let cell = tableView.dequeueReusableCell(withIdentifier: "NewsCell", for: indexPath) as! NewsTableViewCell
         
         cell.headlineLabel?.text = feed.articles![indexPath.row].title?.uppercased()
